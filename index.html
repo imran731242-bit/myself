@@ -1,230 +1,127 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TITAN EXE</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#000;
-color:#fff;
-overflow-x:hidden;
-}
-
-body::before{
-content:"";
-position:fixed;
-width:500px;
-height:500px;
-background:red;
-filter:blur(180px);
-opacity:0.15;
-top:20%;
-left:40%;
-z-index:-1;
-}
-
-.container{
-min-height:100vh;
-display:flex;
-justify-content:space-around;
-align-items:center;
-padding:40px;
-}
-
-/* LEFT SIDE */
-.left{
-max-width:500px;
-}
-
-.logo{
-font-size:28px;
-font-weight:bold;
-margin-bottom:40px;
-}
-
-.logo span{
-color:red;
-}
-
-.tagline{
-color:red;
-letter-spacing:4px;
-margin-bottom:20px;
-}
-
-.hero{
-font-size:90px;
-font-weight:bold;
-line-height:0.95;
-text-shadow:0 0 10px red;
-margin-bottom:20px;
-}
-
-.subtitle{
-font-size:22px;
-margin-bottom:25px;
-}
-
-.quote{
-border-left:4px solid red;
-padding-left:12px;
-color:#bbb;
-margin-bottom:30px;
-}
-
-.buttons{
-display:flex;
-gap:20px;
-}
-
-.btn{
-padding:14px 30px;
-border:1px solid red;
-color:white;
-text-decoration:none;
-box-shadow:0 0 15px red;
-transition:0.3s;
-}
-
-.btn:hover{
-background:red;
-}
-
-/* CARD */
-.card{
-width:360px;
-padding:25px;
-background:rgba(20,20,20,0.8);
-border:1px solid rgba(255,0,0,0.5);
-border-radius:15px;
-box-shadow:0 0 25px rgba(255,0,0,0.4);
-backdrop-filter:blur(10px);
-}
-
-.profile{
-display:flex;
-flex-direction:column;
-align-items:center;
-}
-
-.circle{
-width:140px;
-height:140px;
-border-radius:50%;
-border:4px solid red;
-box-shadow:0 0 20px red;
-overflow:hidden;
-margin-bottom:15px;
-}
-
-.circle img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.name{
-font-size:28px;
-font-weight:bold;
-}
-
-.online{
-color:#00ff66;
-margin-top:8px;
-margin-bottom:20px;
-}
-
-.card h3{
-color:red;
-margin-top:18px;
-margin-bottom:10px;
-}
-
-.join{
-display:block;
-text-align:center;
-margin-top:25px;
-padding:15px;
-background:red;
-color:white;
-text-decoration:none;
-border-radius:10px;
-box-shadow:0 0 20px red;
-}
-
-@media(max-width:900px){
-.container{
-flex-direction:column;
-gap:50px;
-text-align:center;
-}
-
-.hero{
-font-size:60px;
-}
-
-.buttons{
-justify-content:center;
-}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIJAJ !! CHEATS | Official Hub</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+    <div id="hacking-loader">
+        <canvas id="matrix-canvas"></canvas>
+        <div class="scanlines"></div>
+        <div class="glitch-vignette"></div>
 
-<div class="left">
-<div class="logo">TITAN <span>EXE</span></div>
+        <div class="loader-terminal-full">
+            <div class="terminal-header-full">
+                <div class="header-left">
+                    <span class="dot red-pulse"></span>
+                    <span class="dot red-pulse-delayed1"></span>
+                    <span class="dot red-pulse-delayed2"></span>
+                    <span class="terminal-title data-glitch" data-text="SYSTEM_OVERRIDE_CORE_V4">SYSTEM_OVERRIDE_CORE_V4</span>
+                </div>
+                <div class="header-right"><i class="fa-solid fa-triangle-exclamation"></i> CRITICAL BYPASS ACTIVE</div>
+            </div>
+            
+            <div class="terminal-body-full" id="loader-logs"></div>
+            
+            <div class="loader-footer-full">
+                <div class="progress-status-container">
+                    <span class="status-icon"><i class="fa-solid fa-skull"></i></span>
+                    <div class="progress-status-text">CORRUPTING SECURITY SEGMENTS: <span class="loading-blink" id="status-string">INJECTING PACKETS...</span></div>
+                </div>
+                <div class="loader-progress-container-full">
+                    <div class="loader-progress-bar-full" id="loader-progress"></div>
+                    <div class="loader-percentage-full" id="loader-percentage">0%</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="tagline">// NO EXCUSES. NO LIMITS.</div>
+    <div id="particle-container"></div>
+    
+    <audio id="bgMusic" loop>
+        <source src="https://www.image2url.com/r2/default/audio/1780821429758-8bbe072d-3b9f-4ade-9f46-689be12c925a.mp3" type="audio/mpeg">
+    </audio>
 
-<div class="hero">
-TITAN !!<br>
-EXE
-</div>
+    <header class="animate-fade-in">
+        <div class="brand-logo data-glitch" data-text="FIJAJ CHEATS">FIJAJ <span>CHEATS</span></div>
+        <div class="music-bar">
+            <button class="audio-btn vol-btn" id="volDownBtn" title="Volume Down"><i class="fa-solid fa-volume-low"></i></button>
+            <button class="audio-btn" id="prevBtn"><i class="fa-solid fa-backward"></i></button>
+            <div class="music-info">
+                <span id="trackName">FIJAJ SPECIAL</span>
+                <small id="artistName" style="color:var(--text-gray); font-size:0.65rem; display:block;">Official Audio</small>
+            </div>
+            <button class="audio-btn" id="musicBtn"><i class="fa-solid fa-play"></i></button>
+            <button class="audio-btn" id="nextBtn"><i class="fa-solid fa-forward"></i></button>
+            <button class="audio-btn vol-btn" id="volUpBtn" title="Volume Up"><i class="fa-solid fa-volume-high"></i></button>
+        </div>
+        <div class="status-badge"><span class="pulse-node"></span> Online</div>
+    </header>
 
-<div class="subtitle">[ TITAN ON TOP ]</div>
+    <div class="main-workspace">
+        <div class="left-panel">
+            <div class="terminal-tag animate-text-pop">// NO EXCUSES. NO LIMITS.</div>
+            <div class="main-title animate-text-glow">FIJAJ <span>!!</span><br>CHEATS</div>
+            <div class="branding-sub animate-text-reveal">[ FIJAJ ON TOP ]</div>
+            <div class="motto-box animate-text-fade">"While others sleep, I build. <br>While others talk, I execute."</div>
+            <div class="action-cluster animate-buttons">
+                <a href="https://www.youtube.com/channel/UC_sMjADIs3sQcwPvKjjGpPw" target="_blank" class="trigger-btn btn-fill sound-btn">YouTube <i class="fa-brands fa-youtube"></i></a>
+                <a href="https://discord.gg/jgXJpRY7Qx" target="_blank" class="trigger-btn btn-border sound-btn">Discord Hub</a>
+            </div>
+        </div>
 
-<div class="quote">
-“While others sleep, I build.<br>
-While others talk, I execute.”
-</div>
+        <div class="right-panel">
+            <div class="profile-container animate-card-rise">
+                <div class="speech-header animate-text-fade" id="discordStatusText">Ha Ha Ha Haters ki Mkc ☠️</div>
+                <div class="identity-card">
+                    <div class="avatar-frame">
+                        <img id="discordAvatar" src="" alt="Fijaj Cheats Logo">
+                        <span class="live-status-dot online" id="statusDot"></span>
+                    </div>
+                    <h2 class="animate-text-pop">Fijaj !! Cheats <i class="fa-solid fa-lock"></i></h2>
+                    <div class="user-tag" id="discordTag">fijaj_26</div>
+                </div>
+                <div class="badge-grid">
+                    <span class="badge-node animate-pulse-slow">FIJAJ </span>
+                    <span class="badge-node animate-pulse-slow"><i class="fa-solid fa-shield-halved"></i> !!</span>
+                    <span class="badge-node animate-pulse-slow"><i class="fa-solid fa-bolt"></i> CHEATS</span>
+                </div>
+                <div class="separator"></div>
+                <div class="meta-details">
+                    <h3 class="animate-text-reveal">About Me</h3>
+                    <p id="customStatus" class="animate-text-fade">OWNER OF :- FIJAJ !! CHEATS.</p>
+                    
+                    <h3 class="animate-text-reveal">YouTube Channel</h3>
+                    <p class="animate-text-fade"><a href="https://www.youtube.com/channel/UC_sMjADIs3sQcwPvKjjGpPw" target="_blank" class="meta-link sound-btn">Visit Official YouTube</a></p>
+                    
+                    <h3 class="animate-text-reveal">Discord Server</h3>
+                    <p class="animate-text-fade"><a href="https://discord.gg/jgXJpRY7Qx" target="_blank" class="meta-link sound-btn">discord.gg/jgXJpRY7Qx</a></p>
+                    
+                    <h3 class="animate-text-reveal">Skills</h3>
+                    <p class="animate-text-fade">Python / JAVA / C# / 3D game / </p>
+                </div>
+                <button class="action-connect sound-btn" id="joinServerBtn">Join Server <i class="fa-brands fa-discord"></i></button>
+            </div>
+        </div>
+    </div>
 
-<div class="buttons">
-<a href="https://discord.gg/RB3tC5G5" class="btn">DISCORD</a>
-<a href="https://discord.gg/RB3tC5G5" class="btn">DASHBOARD</a>
-</div>
-</div>
+    <div class="metric-footer animate-fade-in">
+        <div class="metric-node"><div class="metric-val">200+</div><div class="metric-lbl">Projects</div></div>
+        <div class="metric-node"><div class="metric-val">5+</div><div class="metric-lbl">Years</div></div>
+        <div class="metric-node"><div class="metric-val">2000+</div><div class="metric-lbl">Clients</div></div>
+        <div class="metric-node"><div class="metric-val">100%</div><div class="metric-lbl">Committed</div></div>
+    </div>
 
-<div class="card">
-<div class="profile">
-<div class="circle">
-<img src="profile.jpg">
-</div>
-
-<div class="name">SAHIL !!👑</div>
-<div class="online">● ONLINE</div>
-</div>
-
-<h3>ABOUT ME</h3>
-<p>Owner of TITAN EXE.</p>
-
-<h3>SKILLS</h3>
-<p>Python / Flask / Bot Dev</p>
-
-<a href="https://discord.gg/RB3tC5G5" class="join">JOIN SERVER</a>
-</div>
-
-</div>
-
+    <script src="script.js"></script>
 </body>
 </html>
