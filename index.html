@@ -1,127 +1,404 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIJAJ !! CHEATS | Official Hub</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cyber Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--red:#ff1a1a;
+--bg:#050505;
+--card:#0d0d0d;
+--text:#ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+font-family:'Orbitron',sans-serif;
+overflow-x:hidden;
+}
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 60px;
+}
+
+.logo{
+font-size:2rem;
+font-weight:900;
+text-shadow:0 0 20px red;
+}
+
+.logo span{
+color:var(--red);
+}
+
+.online{
+color:#00ff66;
+}
+
+.main{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:60px;
+min-height:80vh;
+}
+
+.left{
+width:55%;
+}
+
+.tag{
+color:red;
+letter-spacing:4px;
+margin-bottom:20px;
+}
+
+.title{
+font-size:7rem;
+line-height:.9;
+font-weight:900;
+text-shadow:
+0 0 10px red,
+0 0 30px red,
+0 0 60px red;
+}
+
+.subtitle{
+font-size:2rem;
+margin-top:20px;
+}
+
+.quote{
+margin-top:25px;
+color:#aaa;
+font-style:italic;
+}
+
+.buttons{
+margin-top:35px;
+display:flex;
+gap:20px;
+}
+
+.btn{
+padding:15px 35px;
+text-decoration:none;
+color:white;
+border:2px solid red;
+transition:.3s;
+}
+
+.btn.red{
+background:red;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px red;
+}
+
+.card{
+width:380px;
+background:var(--card);
+border:1px solid rgba(255,0,0,.4);
+border-radius:20px;
+padding:25px;
+box-shadow:0 0 30px rgba(255,0,0,.3);
+}
+
+.avatar{
+width:150px;
+height:150px;
+margin:auto;
+border-radius:50%;
+overflow:hidden;
+border:4px solid red;
+box-shadow:0 0 25px red;
+}
+
+.avatar img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.name{
+text-align:center;
+font-size:2rem;
+margin-top:15px;
+}
+
+.username{
+text-align:center;
+color:#999;
+}
+
+.info{
+margin-top:25px;
+}
+
+.info h3{
+color:red;
+margin-top:15px;
+}
+
+.join{
+display:block;
+margin-top:25px;
+text-align:center;
+background:red;
+padding:15px;
+border-radius:10px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+padding:30px;
+border-top:1px solid #222;
+text-align:center;
+}
+
+.stats h2{
+font-size:3rem;
+text-shadow:0 0 15px red;
+}
+
+.stats p{
+color:#999;
+}
+
+@media(max-width:900px){
+
+.main{
+flex-direction:column;
+gap:40px;
+}
+
+.left{
+width:100%;
+text-align:center;
+}
+
+.title{
+font-size:4rem;
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+}
+
+</style>
 </head>
 <body>
 
-    <div id="hacking-loader">
-        <canvas id="matrix-canvas"></canvas>
-        <div class="scanlines"></div>
-        <div class="glitch-vignette"></div>
+<canvas id="matrix"></canvas>
 
-        <div class="loader-terminal-full">
-            <div class="terminal-header-full">
-                <div class="header-left">
-                    <span class="dot red-pulse"></span>
-                    <span class="dot red-pulse-delayed1"></span>
-                    <span class="dot red-pulse-delayed2"></span>
-                    <span class="terminal-title data-glitch" data-text="SYSTEM_OVERRIDE_CORE_V4">SYSTEM_OVERRIDE_CORE_V4</span>
-                </div>
-                <div class="header-right"><i class="fa-solid fa-triangle-exclamation"></i> CRITICAL BYPASS ACTIVE</div>
-            </div>
-            
-            <div class="terminal-body-full" id="loader-logs"></div>
-            
-            <div class="loader-footer-full">
-                <div class="progress-status-container">
-                    <span class="status-icon"><i class="fa-solid fa-skull"></i></span>
-                    <div class="progress-status-text">CORRUPTING SECURITY SEGMENTS: <span class="loading-blink" id="status-string">INJECTING PACKETS...</span></div>
-                </div>
-                <div class="loader-progress-container-full">
-                    <div class="loader-progress-bar-full" id="loader-progress"></div>
-                    <div class="loader-percentage-full" id="loader-percentage">0%</div>
-                </div>
-            </div>
-        </div>
-    </div>
+<header>
 
-    <div id="particle-container"></div>
-    
-    <audio id="bgMusic" loop>
-        <source src="https://www.image2url.com/r2/default/audio/1780821429758-8bbe072d-3b9f-4ade-9f46-689be12c925a.mp3" type="audio/mpeg">
-    </audio>
+<div class="logo">
+CYBER <span>HUB</span>
+</div>
 
-    <header class="animate-fade-in">
-        <div class="brand-logo data-glitch" data-text="FIJAJ CHEATS">FIJAJ <span>CHEATS</span></div>
-        <div class="music-bar">
-            <button class="audio-btn vol-btn" id="volDownBtn" title="Volume Down"><i class="fa-solid fa-volume-low"></i></button>
-            <button class="audio-btn" id="prevBtn"><i class="fa-solid fa-backward"></i></button>
-            <div class="music-info">
-                <span id="trackName">FIJAJ SPECIAL</span>
-                <small id="artistName" style="color:var(--text-gray); font-size:0.65rem; display:block;">Official Audio</small>
-            </div>
-            <button class="audio-btn" id="musicBtn"><i class="fa-solid fa-play"></i></button>
-            <button class="audio-btn" id="nextBtn"><i class="fa-solid fa-forward"></i></button>
-            <button class="audio-btn vol-btn" id="volUpBtn" title="Volume Up"><i class="fa-solid fa-volume-high"></i></button>
-        </div>
-        <div class="status-badge"><span class="pulse-node"></span> Online</div>
-    </header>
+<div class="online">
+🟢 ONLINE
+</div>
 
-    <div class="main-workspace">
-        <div class="left-panel">
-            <div class="terminal-tag animate-text-pop">// NO EXCUSES. NO LIMITS.</div>
-            <div class="main-title animate-text-glow">FIJAJ <span>!!</span><br>CHEATS</div>
-            <div class="branding-sub animate-text-reveal">[ FIJAJ ON TOP ]</div>
-            <div class="motto-box animate-text-fade">"While others sleep, I build. <br>While others talk, I execute."</div>
-            <div class="action-cluster animate-buttons">
-                <a href="https://www.youtube.com/channel/UC_sMjADIs3sQcwPvKjjGpPw" target="_blank" class="trigger-btn btn-fill sound-btn">YouTube <i class="fa-brands fa-youtube"></i></a>
-                <a href="https://discord.gg/jgXJpRY7Qx" target="_blank" class="trigger-btn btn-border sound-btn">Discord Hub</a>
-            </div>
-        </div>
+</header>
 
-        <div class="right-panel">
-            <div class="profile-container animate-card-rise">
-                <div class="speech-header animate-text-fade" id="discordStatusText">Ha Ha Ha Haters ki Mkc ☠️</div>
-                <div class="identity-card">
-                    <div class="avatar-frame">
-                        <img id="discordAvatar" src="" alt="Fijaj Cheats Logo">
-                        <span class="live-status-dot online" id="statusDot"></span>
-                    </div>
-                    <h2 class="animate-text-pop">Fijaj !! Cheats <i class="fa-solid fa-lock"></i></h2>
-                    <div class="user-tag" id="discordTag">fijaj_26</div>
-                </div>
-                <div class="badge-grid">
-                    <span class="badge-node animate-pulse-slow">FIJAJ </span>
-                    <span class="badge-node animate-pulse-slow"><i class="fa-solid fa-shield-halved"></i> !!</span>
-                    <span class="badge-node animate-pulse-slow"><i class="fa-solid fa-bolt"></i> CHEATS</span>
-                </div>
-                <div class="separator"></div>
-                <div class="meta-details">
-                    <h3 class="animate-text-reveal">About Me</h3>
-                    <p id="customStatus" class="animate-text-fade">OWNER OF :- FIJAJ !! CHEATS.</p>
-                    
-                    <h3 class="animate-text-reveal">YouTube Channel</h3>
-                    <p class="animate-text-fade"><a href="https://www.youtube.com/channel/UC_sMjADIs3sQcwPvKjjGpPw" target="_blank" class="meta-link sound-btn">Visit Official YouTube</a></p>
-                    
-                    <h3 class="animate-text-reveal">Discord Server</h3>
-                    <p class="animate-text-fade"><a href="https://discord.gg/jgXJpRY7Qx" target="_blank" class="meta-link sound-btn">discord.gg/jgXJpRY7Qx</a></p>
-                    
-                    <h3 class="animate-text-reveal">Skills</h3>
-                    <p class="animate-text-fade">Python / JAVA / C# / 3D game / </p>
-                </div>
-                <button class="action-connect sound-btn" id="joinServerBtn">Join Server <i class="fa-brands fa-discord"></i></button>
-            </div>
-        </div>
-    </div>
+<section class="main">
 
-    <div class="metric-footer animate-fade-in">
-        <div class="metric-node"><div class="metric-val">200+</div><div class="metric-lbl">Projects</div></div>
-        <div class="metric-node"><div class="metric-val">5+</div><div class="metric-lbl">Years</div></div>
-        <div class="metric-node"><div class="metric-val">2000+</div><div class="metric-lbl">Clients</div></div>
-        <div class="metric-node"><div class="metric-val">100%</div><div class="metric-lbl">Committed</div></div>
-    </div>
+<div class="left">
 
-    <script src="script.js"></script>
+<div class="tag">
+// NO EXCUSES. NO LIMITS.
+</div>
+
+<div class="title">
+CYBER<br>
+HUB
+</div>
+
+<div class="subtitle">
+[ ON TOP ]
+</div>
+
+<div class="quote">
+"While others sleep, I build.<br>
+While others talk, I execute."
+</div>
+
+<div class="buttons">
+<a href="#" class="btn red">YOUTUBE</a>
+<a href="#" class="btn">DISCORD</a>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="avatar">
+<img src="https://via.placeholder.com/300" alt="">
+</div>
+
+<div class="name">
+Cyber Hub 🔒
+</div>
+
+<div class="username">
+@cyberhub
+</div>
+
+<div class="info">
+
+<h3>ABOUT</h3>
+<p>Owner & Developer</p>
+
+<h3>DISCORD</h3>
+<p>discord.gg/example</p>
+
+<h3>SKILLS</h3>
+<p>Python / JS / Java / C#</p>
+
+</div>
+
+<a href="#" class="join">
+JOIN SERVER
+</a>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div>
+<h2>200+</h2>
+<p>Projects</p>
+</div>
+
+<div>
+<h2>5+</h2>
+<p>Years</p>
+</div>
+
+<div>
+<h2>2000+</h2>
+<p>Clients</p>
+</div>
+
+<div>
+<h2>100%</h2>
+<p>Committed</p>
+</div>
+
+</section>
+
+<script>
+
+const canvas =
+document.getElementById("matrix");
+
+const ctx =
+canvas.getContext("2d");
+
+canvas.width =
+window.innerWidth;
+
+canvas.height =
+window.innerHeight;
+
+const chars =
+"01CYBERHUB";
+
+const size = 14;
+
+const cols =
+canvas.width / size;
+
+const drops =
+Array(Math.floor(cols)).fill(1);
+
+function draw(){
+
+ctx.fillStyle =
+"rgba(0,0,0,0.08)";
+
+ctx.fillRect(
+0,0,
+canvas.width,
+canvas.height
+);
+
+ctx.fillStyle =
+"#ff0000";
+
+ctx.font =
+size + "px monospace";
+
+for(let i=0;i<drops.length;i++){
+
+const text =
+chars[
+Math.floor(
+Math.random()*chars.length
+)
+];
+
+ctx.fillText(
+text,
+i*size,
+drops[i]*size
+);
+
+if(
+drops[i]*size >
+canvas.height &&
+Math.random() > 0.975
+){
+drops[i]=0;
+}
+
+drops[i]++;
+}
+}
+
+setInterval(draw,33);
+
+</script>
+
 </body>
 </html>
+```
