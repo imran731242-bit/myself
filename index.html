@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TITAN EXE | Official TITAN EXE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="hacking-loader">
+      <canvas id="matrix-canvas"></canvas>
+      <div class="scanlines"></div>
+      <div class="glitch-vignette"></div>
+
+      <div class="loader-terminal-full">
+        <div class="terminal-header-full">
+          <div class="header-left">
+            <span class="dot red-pulse"></span>
+            <span class="dot red-pulse-delayed1"></span>
+            <span class="dot red-pulse-delayed2"></span>
+            <span
+              class="terminal-title data-glitch"
+              data-text="SYSTEM_OVERRIDE_CORE_V4"
+              >SYSTEM_OVERRIDE_CORE_V4</span
+            >
+          </div>
+          <div class="header-right">
+            <i class="fa-solid fa-triangle-exclamation"></i> CRITICAL BYPASS
+            ACTIVE
+          </div>
+        </div>
+
+        <div class="terminal-body-full" id="loader-logs"></div>
+
+        <div class="loader-footer-full">
+          <div class="progress-status-container">
+            <span class="status-icon"><i class="fa-solid fa-skull"></i></span>
+            <div class="progress-status-text">
+              CORRUPTING SECURITY SEGMENTS:
+              <span class="loading-blink" id="status-string"
+                >INJECTING PACKETS...</span
+              >
+            </div>
+          </div>
+          <div class="loader-progress-container-full">
+            <div class="loader-progress-bar-full" id="loader-progress"></div>
+            <div class="loader-percentage-full" id="loader-percentage">0%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="particle-container"></div>
+
+    <audio id="bgMusic" loop>
+      <source
+        src="https://www.image2url.com/r2/default/audio/1780821429758-8bbe072d-3b9f-4ade-9f46-689be12c925a.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+
+    <header class="animate-fade-in">
+      <div class="brand-logo data-glitch" data-text="TITAN">
+        TITAN <span>CHEATS</span>
+      </div>
+      <div class="music-bar">
+        <button class="audio-btn vol-btn" id="volDownBtn" title="Volume Down">
+          <i class="fa-solid fa-volume-low"></i>
+        </button>
+        <button class="audio-btn" id="prevBtn">
+          <i class="fa-solid fa-backward"></i>
+        </button>
+        <div class="music-info">
+          <span id="trackName">TITAN EXE</span>
+          <small
+            id="artistName"
+            style="color: var(--text-gray); font-size: 0.65rem; display: block"
+            >Official Audio</small
+          >
+        </div>
+        <button class="audio-btn" id="musicBtn">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button class="audio-btn" id="nextBtn">
+          <i class="fa-solid fa-forward"></i>
+        </button>
+        <button class="audio-btn vol-btn" id="volUpBtn" title="Volume Up">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+      </div>
+      <div class="status-badge"><span class="pulse-node"></span> Online</div>
+    </header>
+
+    <div class="main-workspace">
+      <div class="left-panel">
+        <div class="terminal-tag animate-text-pop">
+          //  NO LIMITS.
+        </div>
+        <div class="main-title animate-text-glow">
+          TITAN <span>!!</span><br />EXE
+        </div>
+        <div class="branding-sub animate-text-reveal">[ TITAN EXE ON TOP BABY ]</div>
+        <div class="motto-box animate-text-fade">
+          "Safest panel,Join Discord. <br />For free panel."
+        </div>
+        <div class="action-cluster animate-buttons">
+          <a
+            href="https://youtube.com/@titanexe999?si=K63Sg3SIXY98_gfB"
+            target="_blank"
+            class="trigger-btn btn-fill sound-btn"
+            >YouTube <i class="fa-brands fa-youtube"></i
+          ></a>
+          <a
+            href="https://discord.gg/hXrKJkFK"
+            target="_blank"
+            class="trigger-btn btn-border sound-btn"
+            >Discord Hub</a
+          >
+        </div>
+      </div>
+
+      <div class="right-panel">
+        <div class="profile-container animate-card-rise">
+          <div class="speech-header animate-text-fade" id="discordStatusText">
+            TITAN EXE IN TOP BABY ☠️
+          </div>
+          <div class="identity-card">
+            <div class="avatar-frame">
+              <img
+                  id="discordAvatar"
+                  src="logo.png"
+                  alt="Titan EXE Logo"
+                 />
+              <span class="live-status-dot online" id="statusDot"></span>
+            </div>
+            <h2 class="animate-text-pop">
+              SAHIL !! <i class="fa-solid fa-lock"></i>
+            </h2>
+            <div class="user-tag" id="discordTag">sahilll_l</div>
+          </div>
+          <div class="badge-grid">
+            <span class="badge-node animate-pulse-slow">TITAN</span>
+            <span class="badge-node animate-pulse-slow"
+              ><i class="fa-solid fa-shield-halved"></i> !!</span
+            >
+            <span class="badge-node animate-pulse-slow"
+              ><i class="fa-solid fa-bolt"></i>EXE</span
+            >
+          </div>
+          <div class="separator"></div>
+          <div class="meta-details">
+            <h3 class="animate-text-reveal">About Me</h3>
+            <p id="customStatus" class="animate-text-fade">
+              MANAGER OF :- TITAN EXE.
+            </p>
+
+            <h3 class="animate-text-reveal">YouTube Channel</h3>
+            <p class="animate-text-fade">
+              <a
+                href="https://youtube.com/@titanexe999?si=K63Sg3SIXY98_gfB"
+                target="_blank"
+                class="meta-link sound-btn"
+                >Visit Official YouTube</a
+              >
+            </p>
+
+            <h3 class="animate-text-reveal">Discord Server</h3>
+            <p class="animate-text-fade">
+              <a
+                href="https://discord.gg/hXrKJkFK"
+                target="_blank"
+                class="meta-link sound-btn"
+                >https://discord.gg/hXrKJkFK</a
+              >
+            </p>
+
+            <h3 class="animate-text-reveal">Skills</h3>
+            <p class="animate-text-fade">Python / JAVA / C# / 3D game /</p>
+          </div>
+          <button class="action-connect sound-btn" id="joinServerBtn">
+            Join Server <i class="fa-brands fa-discord"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="metric-footer animate-fade-in">
+      <div class="metric-node">
+        <div class="metric-val">200+</div>
+        <div class="metric-lbl">Projects</div>
+      </div>
+      <div class="metric-node">
+        <div class="metric-val">5+</div>
+        <div class="metric-lbl">Years</div>
+      </div>
+      <div class="metric-node">
+        <div class="metric-val">2000+</div>
+        <div class="metric-lbl">Clients</div>
+      </div>
+      <div class="metric-node">
+        <div class="metric-val">100%</div>
+        <div class="metric-lbl">Committed</div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
