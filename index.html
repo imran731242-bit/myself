@@ -3,570 +3,228 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cyber Green Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<title>TITAN EXE</title>
 
 <style>
-
-:root{
-    --green:#00ff88;
-    --green-dark:#00cc6f;
-    --bg:#050505;
-    --card:#0b0b0b;
-    --border:rgba(0,255,136,.25);
-}
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Orbitron',sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
 body{
-    background:var(--bg);
-    color:white;
-    overflow-x:hidden;
+background:#000;
+color:#fff;
+overflow-x:hidden;
 }
 
-/* Animated background */
-
-#particles{
-    position:fixed;
-    inset:0;
-    z-index:-2;
+body::before{
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+background:red;
+filter:blur(180px);
+opacity:0.15;
+top:20%;
+left:40%;
+z-index:-1;
 }
 
-.grid{
-    position:fixed;
-    inset:0;
-    background:
-    linear-gradient(rgba(0,255,136,.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,255,136,.05) 1px, transparent 1px);
-    background-size:50px 50px;
-    z-index:-1;
+.container{
+min-height:100vh;
+display:flex;
+justify-content:space-around;
+align-items:center;
+padding:40px;
 }
 
-/* Header */
-
-header{
-    width:90%;
-    margin:auto;
-    padding:25px 0;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+/* LEFT SIDE */
+.left{
+max-width:500px;
 }
 
 .logo{
-    font-size:38px;
-    font-weight:900;
+font-size:28px;
+font-weight:bold;
+margin-bottom:40px;
 }
 
 .logo span{
-    color:var(--green);
-    text-shadow:0 0 15px var(--green);
+color:red;
 }
 
-.online{
-    color:var(--green);
-    font-size:14px;
-    letter-spacing:2px;
+.tagline{
+color:red;
+letter-spacing:4px;
+margin-bottom:20px;
 }
-
-/* Music Bar */
-
-.music-bar{
-    width:420px;
-    max-width:90%;
-    margin:10px auto 0;
-    padding:12px 25px;
-    border:1px solid var(--border);
-    border-radius:50px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    backdrop-filter:blur(10px);
-    box-shadow:0 0 20px rgba(0,255,136,.15);
-}
-
-.music-btn{
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    border:none;
-    background:#111;
-    color:var(--green);
-    cursor:pointer;
-    font-size:18px;
-}
-
-.song{
-    text-align:center;
-}
-
-.song h4{
-    color:var(--green);
-}
-
-.song p{
-    font-size:12px;
-    color:#999;
-}
-
-/* Hero */
 
 .hero{
-    width:90%;
-    margin:auto;
-    min-height:80vh;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:50px;
-}
-
-.left{
-    flex:1;
-}
-
-.tag{
-    color:var(--green);
-    letter-spacing:5px;
-    margin-bottom:25px;
-}
-
-.hero h1{
-    font-size:110px;
-    line-height:.9;
-
-    text-shadow:
-    0 0 10px var(--green),
-    0 0 30px var(--green),
-    0 0 60px rgba(0,255,136,.4);
-}
-
-.hero h1 span{
-    color:var(--green);
+font-size:90px;
+font-weight:bold;
+line-height:0.95;
+text-shadow:0 0 10px red;
+margin-bottom:20px;
 }
 
 .subtitle{
-    margin:25px 0;
-    font-size:26px;
-    color:#aaa;
+font-size:22px;
+margin-bottom:25px;
 }
 
 .quote{
-    border-left:4px solid var(--green);
-    padding-left:20px;
-    color:#ddd;
-    max-width:550px;
-    margin-bottom:35px;
+border-left:4px solid red;
+padding-left:12px;
+color:#bbb;
+margin-bottom:30px;
 }
 
 .buttons{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
+display:flex;
+gap:20px;
 }
 
 .btn{
-    padding:16px 35px;
-    text-decoration:none;
-    transition:.3s;
-    font-weight:700;
+padding:14px 30px;
+border:1px solid red;
+color:white;
+text-decoration:none;
+box-shadow:0 0 15px red;
+transition:0.3s;
 }
 
-.btn-primary{
-    background:var(--green);
-    color:black;
+.btn:hover{
+background:red;
 }
 
-.btn-primary:hover{
-    transform:translateY(-3px);
-    box-shadow:0 0 25px var(--green);
-}
-
-.btn-outline{
-    border:2px solid var(--green);
-    color:var(--green);
-}
-
-.btn-outline:hover{
-    background:var(--green);
-    color:black;
-}
-
-/* Profile Card */
-
+/* CARD */
 .card{
-    width:370px;
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:25px;
-    padding:30px;
-    box-shadow:0 0 30px rgba(0,255,136,.15);
+width:360px;
+padding:25px;
+background:rgba(20,20,20,0.8);
+border:1px solid rgba(255,0,0,0.5);
+border-radius:15px;
+box-shadow:0 0 25px rgba(255,0,0,0.4);
+backdrop-filter:blur(10px);
 }
 
-.avatar-wrap{
-    display:flex;
-    justify-content:center;
+.profile{
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
-.avatar-ring{
-    width:170px;
-    height:170px;
-    border-radius:50%;
-    padding:6px;
-    background:
-    conic-gradient(
-    var(--green),
-    transparent,
-    var(--green)
-    );
-
-    animation:spin 5s linear infinite;
+.circle{
+width:140px;
+height:140px;
+border-radius:50%;
+border:4px solid red;
+box-shadow:0 0 20px red;
+overflow:hidden;
+margin-bottom:15px;
 }
 
-.avatar{
-    width:100%;
-    height:100%;
-    border-radius:50%;
-    background:#111;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:55px;
+.circle img{
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
-@keyframes spin{
-    from{transform:rotate(0deg);}
-    to{transform:rotate(360deg);}
+.name{
+font-size:28px;
+font-weight:bold;
 }
 
-.card h2{
-    text-align:center;
-    margin-top:20px;
+.online{
+color:#00ff66;
+margin-top:8px;
+margin-bottom:20px;
 }
 
-.username{
-    text-align:center;
-    color:#888;
-    margin-bottom:25px;
-}
-
-.badges{
-    display:flex;
-    gap:10px;
-    justify-content:center;
-    flex-wrap:wrap;
-    margin-bottom:20px;
-}
-
-.badge{
-    border:1px solid var(--green);
-    padding:8px 12px;
-    font-size:12px;
-}
-
-.info{
-    margin-top:15px;
-}
-
-.info h4{
-    color:var(--green);
-    margin-bottom:5px;
-}
-
-.info p{
-    color:#aaa;
-    font-size:14px;
+.card h3{
+color:red;
+margin-top:18px;
+margin-bottom:10px;
 }
 
 .join{
-    margin-top:25px;
-    display:block;
-    text-align:center;
-    padding:16px;
-    background:var(--green);
-    color:black;
-    text-decoration:none;
-    font-weight:700;
+display:block;
+text-align:center;
+margin-top:25px;
+padding:15px;
+background:red;
+color:white;
+text-decoration:none;
+border-radius:10px;
+box-shadow:0 0 20px red;
 }
 
-/* Stats */
-
-.stats{
-    width:90%;
-    margin:50px auto;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+@media(max-width:900px){
+.container{
+flex-direction:column;
+gap:50px;
+text-align:center;
 }
-
-.stat{
-    text-align:center;
-    padding:25px;
-    border:1px solid var(--border);
-}
-
-.stat h2{
-    color:var(--green);
-    font-size:50px;
-}
-
-/* Footer */
-
-footer{
-    text-align:center;
-    padding:40px 20px;
-    color:#777;
-}
-
-/* Responsive */
-
-@media(max-width:1000px){
 
 .hero{
-    flex-direction:column;
-    text-align:center;
+font-size:60px;
 }
 
-.quote{
-    border:none;
-    margin:auto auto 30px;
-}
-
-.hero h1{
-    font-size:70px;
-}
-
-.stats{
-    grid-template-columns:repeat(2,1fr);
+.buttons{
+justify-content:center;
 }
 }
-
-@media(max-width:600px){
-
-.hero h1{
-    font-size:48px;
-}
-
-.stats{
-    grid-template-columns:1fr;
-}
-
-.card{
-    width:100%;
-}
-}
-
 </style>
 </head>
 <body>
 
-<canvas id="particles"></canvas>
-<div class="grid"></div>
-
-<header>
-    <div class="logo">YOUR<span>BRAND</span></div>
-    <div class="online">● ONLINE</div>
-</header>
-
-<div class="music-bar">
-    <button class="music-btn">⏮</button>
-
-    <div class="song">
-        <h4>CYBER MODE</h4>
-        <p>Now Playing</p>
-    </div>
-
-    <button class="music-btn">▶</button>
-</div>
-
-<section class="hero">
+<div class="container">
 
 <div class="left">
+<div class="logo">TITAN <span>EXE</span></div>
 
-    <div class="tag">// NO EXCUSES • NO LIMITS</div>
+<div class="tagline">// NO EXCUSES. NO LIMITS.</div>
 
-    <h1>
-        CYBER<br>
-        <span>GREEN</span>
-    </h1>
+<div class="hero">
+TITAN !!<br>
+EXE
+</div>
 
-    <div class="subtitle">
-        [ YOUR NAME ON TOP ]
-    </div>
+<div class="subtitle">[ TITAN ON TOP ]</div>
 
-    <div class="quote">
-        "While others sleep, I build.<br>
-        While others talk, I execute."
-    </div>
+<div class="quote">
+“While others sleep, I build.<br>
+While others talk, I execute.”
+</div>
 
-    <div class="buttons">
-        <a href="#" class="btn btn-primary">YOUTUBE</a>
-        <a href="https://discord.gg/Ek6VVHVa"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="btn btn-outline">
-   DISCORD HUB
-</a>
-    </div>
-
+<div class="buttons">
+<a href="https://discord.gg/RB3tC5G5" class="btn">DISCORD</a>
+<a href="https://discord.gg/RB3tC5G5" class="btn">DASHBOARD</a>
+</div>
 </div>
 
 <div class="card">
-
-    <div class="avatar-wrap">
-        <div class="avatar-ring">
-            <div class="avatar">⚡</div>
-        </div>
-    </div>
-
-    <h2>Your Name</h2>
-    <div class="username">@username</div>
-
-    <div class="badges">
-        <div class="badge">DEVELOPER</div>
-        <div class="badge">DESIGNER</div>
-        <div class="badge">CREATOR</div>
-    </div>
-
-    <div class="info">
-        <h4>ABOUT</h4>
-        <p>Building websites, apps and creative digital experiences.</p>
-    </div>
-
-    <div class="info">
-        <h4>SKILLS</h4>
-        <p>HTML / CSS / JS / React / Node.js</p>
-    </div>
-
-    <a href="https://discord.gg/Ek6VVHVa"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="join">
-   JOIN SERVER
-</a>
-
+<div class="profile">
+<div class="circle">
+<img src="profile.jpg">
 </div>
 
-</section>
-
-<section class="stats">
-
-<div class="stat">
-    <h2 data-target="200">0</h2>
-    <p>PROJECTS</p>
+<div class="name">SAHIL !!👑</div>
+<div class="online">● ONLINE</div>
 </div>
 
-<div class="stat">
-    <h2 data-target="5">0</h2>
-    <p>YEARS</p>
+<h3>ABOUT ME</h3>
+<p>Owner of TITAN EXE.</p>
+
+<h3>SKILLS</h3>
+<p>Python / Flask / Bot Dev</p>
+
+<a href="https://discord.gg/RB3tC5G5" class="join">JOIN SERVER</a>
 </div>
 
-<div class="stat">
-    <h2 data-target="2000">0</h2>
-    <p>CLIENTS</p>
 </div>
-
-<div class="stat">
-    <h2 data-target="100">0</h2>
-    <p>COMMITTED</p>
-</div>
-
-</section>
-
-<footer>
-© 2026 YOUR BRAND • ALL RIGHTS RESERVED
-</footer>
-
-<script>
-
-/* Counter Animation */
-
-document.querySelectorAll('[data-target]').forEach(counter=>{
-
-let target=+counter.dataset.target;
-let count=0;
-
-let update=()=>{
-
-let increment=target/80;
-
-if(count<target){
-count+=increment;
-counter.innerText=Math.floor(count);
-requestAnimationFrame(update);
-}else{
-counter.innerText=target+"+";
-}
-
-}
-
-update();
-
-});
-
-/* Particles */
-
-const canvas=document.getElementById("particles");
-const ctx=canvas.getContext("2d");
-
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
-
-let particles=[];
-
-for(let i=0;i<80;i++){
-
-particles.push({
-x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-r:Math.random()*2+1,
-dx:(Math.random()-.5)*1,
-dy:(Math.random()-.5)*1
-});
-
-}
-
-function animate(){
-
-ctx.clearRect(0,0,canvas.width,canvas.height);
-
-particles.forEach(p=>{
-
-ctx.beginPath();
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-ctx.fillStyle="#00ff88";
-ctx.fill();
-
-p.x+=p.dx;
-p.y+=p.dy;
-
-if(p.x<0||p.x>canvas.width)p.dx*=-1;
-if(p.y<0||p.y>canvas.height)p.dy*=-1;
-
-});
-
-requestAnimationFrame(animate);
-
-}
-
-animate();
-
-window.addEventListener("resize",()=>{
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
-});
-
-</script>
 
 </body>
 </html>
