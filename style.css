@@ -8,16 +8,16 @@
 
 :root {
   --bg-deep: #050505;
-  --primary-red: #FFD700;
-  --neon-glow: 0 0 25px #FFD700, 0 0 10px rgba(255, 215, 0, 0.6);
+  --primary-red: #e61c24;
+  --neon-glow: 0 0 25px #e61c24, 0 0 10px rgba(230, 28, 36, 0.6);
   --panel-bg: rgba(13, 13, 13, 0.88);
-  --border-line: rgba(255, 215, 0, 0.4);
+  --border-line: rgba(230, 28, 36, 0.4);
   --text-gray: #a0a0a0;
 
-  --loader-red: #FFD700;
-  --loader-glow-red: #FFC107;
-  --loader-dark-red: #A67C00;
-  --loader-muted-red: #CC9A06;
+  --loader-red: #e61c24;
+  --loader-glow-red: #ff4d53;
+  --loader-dark-red: #6e090c;
+  --loader-muted-red: #941115;
 }
 
 body {
@@ -37,7 +37,7 @@ body {
   font-size: 1.3rem;
   font-weight: 900;
   color: var(--primary-red);
-  text-shadow: 0 0 12px #FFD700, 0 0 5px #ffffff;
+  text-shadow: 0 0 12px #e61c24, 0 0 5px #ffffff;
   pointer-events: none;
   z-index: 99999;
   transform: translate(-50%, -50%);
@@ -350,7 +350,7 @@ body {
     90deg,
     var(--loader-dark-red),
     var(--loader-red),
-    #FFC107
+    #ff878b
   );
   box-shadow: 0 0 10px var(--primary-red);
   border-radius: 4px;
@@ -381,7 +381,7 @@ body {
 }
 .data-glitch::before {
   left: 1px;
-  text-shadow: -1px 0  #FFD700;
+  text-shadow: -1px 0 #ff6b71;
   clip: rect(44px, 450px, 56px, 0);
   animation: glitchAnim 6s infinite linear alternate-reverse;
 }
@@ -439,7 +439,7 @@ header {
 }
 .brand-logo span {
   color: var(--primary-red);
-  text-shadow: 0 0 15px #FFD700;
+  text-shadow: 0 0 15px #e61c24;
 }
 .music-bar {
   background: rgba(15, 15, 15, 0.88);
@@ -572,7 +572,7 @@ header {
   box-shadow: var(--neon-glow);
 }
 .btn-fill:hover {
-  box-shadow: 0 0 35px #FFD700;
+  box-shadow: 0 0 35px #e61c24;
   transform: translateY(-2px);
 }
 .btn-border {
@@ -641,10 +641,9 @@ header {
   border-radius: 50%;
   border: 3px solid #0d0d0d;
 }
-.pulse-node,
 .live-status-dot.online {
-  background: #FFD700;
-  box-shadow: 0 0 12px #FFD700;
+  background-color: #23a55a;
+  box-shadow: 0 0 10px #23a55a;
 }
 
 .identity-card h2 {
@@ -721,7 +720,7 @@ header {
   transition: 0.3s;
 }
 .action-connect:hover {
-  box-shadow: 0 0 30px #FFD700;
+  box-shadow: 0 0 30px #e61c24;
   transform: scale(1.02);
 }
 
