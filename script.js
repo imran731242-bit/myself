@@ -78,6 +78,18 @@
       <div class="music-bar">
         <button class="audio-btn vol-btn" id="volDownBtn" title="Volume Down">
           <i class="fa-solid fa-volume-low"></i>
+        </button>
+        <button class="audio-btn" id="prevBtn">
+          <i class="fa-solid fa-backward"></i>
+        </button>
+        <div class="music-info">
+          <span id="trackName">TITAN EXE</span>
+          <small
+            id="artistName"
+            style="color: var(--text-gray); font-size: 0.65rem; display: block"
+            >Official Audio</small
+          >
+        </div>
         <button class="audio-btn" id="musicBtn">
           <i class="fa-solid fa-play"></i>
         </button>
