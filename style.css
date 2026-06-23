@@ -380,10 +380,7 @@ body {
   background: transparent;
 }
 .data-glitch::before {
-  left: 1px;
-  text-shadow: -1px 0 #ff6b71;
-  clip: rect(44px, 450px, 56px, 0);
-  animation: glitchAnim 6s infinite linear alternate-reverse;
+  text-shadow: -1px 0 #FFD700;
 }
 @keyframes glitchAnim {
   0% {
@@ -438,8 +435,8 @@ header {
   text-shadow: 0 0 10px rgba(230, 28, 36, 0.3);
 }
 .brand-logo span {
-  color: var(--primary-red);
-  text-shadow: 0 0 15px #FFD700;
+  color: #FFD700;
+  text-shadow: 0 0 20px #FFD700;
 }
 .music-bar {
   background: rgba(15, 15, 15, 0.88);
