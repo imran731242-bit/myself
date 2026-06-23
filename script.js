@@ -64,7 +64,7 @@
 
     <div id="particle-container"></div>
 
-    
+    <audio id="bgMusic" loop>
       <source
         src="https://www.image2url.com/r2/default/audio/1780821429758-8bbe072d-3b9f-4ade-9f46-689be12c925a.mp3"
         type="audio/mpeg"
@@ -75,20 +75,9 @@
       <div class="brand-logo data-glitch" data-text="TITAN">
         TITAN <span>CHEATS</span>
       </div>
+      <div class="music-bar">
         <button class="audio-btn vol-btn" id="volDownBtn" title="Volume Down">
           <i class="fa-solid fa-volume-low"></i>
-        </button>
-        <button class="audio-btn" id="prevBtn">
-          <i class="fa-solid fa-backward"></i>
-        </button>
-        <div class="music-info">
-          <span id="trackName">TITAN EXE</span>
-          <small
-            id="artistName"
-            style="color: var(--text-gray); font-size: 0.65rem; display: block"
-            >Official Audio</small
-          >
-        </div>
         <button class="audio-btn" id="musicBtn">
           <i class="fa-solid fa-play"></i>
         </button>
