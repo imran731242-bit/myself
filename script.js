@@ -321,7 +321,10 @@ async function fetchDiscordStatus() {
     avatarImg.src = "logo.png";
   }
 }
-
+#trackName,
+#artistName {
+  display: none;
+}
       if (data.activities && data.activities.length > 0) {
         const customAct = data.activities.find((act) => act.type === 4);
         const statusP = document.getElementById("customStatus");
